@@ -1,0 +1,47 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+  "extends": ["ultracite"],
+  "files": {
+    "includes": [
+      "**",
+      "!**/*/.next/**/*",
+      "!**/*/_generated/**/*",
+      "!**/*/node_modules/**/*",
+      "!**/*/app/i18n/**/*",
+      "!**/*/storybook-static/**/*",
+      "!**/*/public/**/*",
+      "!**/*/*.gen.*",
+      "!**/*/.output/**/*",
+      "!**/*/.vinxi/**/*",
+      "!**/*/.wrangler/**/*",
+      "!**/*/dist/**/*",
+      "!**/*/build/**/*",
+      "!**/.turbo/**/*",
+      "!**/*/.react-router/**/*"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "noNonNullAssertion": "off",
+        "useConsistentMemberAccessibility": "off"
+      },
+      "performance": {
+        "noImgElement": "off"
+      },
+      "nursery": {
+        "noShadow": "off",
+        "noBitwiseOperators": "off",
+        "noAwaitInLoop": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "asNeeded"
+    }
+  }
+}

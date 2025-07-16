@@ -1,0 +1,37 @@
+{
+  "name": "api",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./types": "./src/orpc-types.ts"
+  },
+  "scripts": {
+    "dev": "dotenvx run -- vite dev",
+    "start": "dotenvx run -- node dist/node.js",
+    "build": "tsup",
+    "vercel-build": "pnpm build || true"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "catalog:",
+    "@hono/vite-build": "^1.6.2",
+    "@hono/zod-openapi": "catalog:",
+    "@mando/services": "workspace:*",
+    "@novu/api": "catalog:",
+    "@scalar/hono-api-reference": "^0.9.10",
+    "hono": "^4.8.5",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.16.0",
+    "@hono/vite-dev-server": "^0.20.0",
+    "@mando/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "tsup": "^8.5.0",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vercel": "^44.4.1",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:"
+  }
+}

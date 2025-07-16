@@ -1,0 +1,24 @@
+{
+  "name": "@mando/services",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "lint": "ultracite lint",
+    "lint:fix": "ultracite format",
+    "lint:unsafe": "ultracite format --unsafe",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@mando/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@novu/api": "catalog:"
+  }
+}

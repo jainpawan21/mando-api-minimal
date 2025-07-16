@@ -1,0 +1,45 @@
+{
+  "name": "mando.cx",
+  "private": true,
+  "packageManager": "pnpm@10.12.4",
+  "scripts": {
+    "prepare": "husky",
+    "build": "turbo build --cache-dir=.turbo",
+    "dev": "turbo dev",
+    "lint": "ultracite lint",
+    "lint:fix": "ultracite format",
+    "lint:unsafe": "ultracite format --unsafe",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "monorepo:lint": "sherif --fix",
+    "knip": "knip",
+    "knip:production": "knip --production",
+    "knip:fix": "knip --fix"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.6",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "knip": "^5.61.3",
+    "sherif": "^1.6.1",
+    "turbo": "^2.5.4",
+    "typescript": "catalog:",
+    "ultracite": "^5.0.35"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "@clerk/shared",
+      "@swc/core",
+      "@tailwindcss/oxide",
+      "bufferutil",
+      "core-js",
+      "core-js-pure",
+      "esbuild",
+      "iframe-resizer",
+      "protobufjs",
+      "sharp"
+    ]
+  }
+}

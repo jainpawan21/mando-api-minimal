@@ -1,0 +1,16 @@
+{
+  "name": "@mando/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "ultracite lint",
+    "lint:fix": "ultracite format",
+    "lint:unsafe": "ultracite format --unsafe",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ]
+}

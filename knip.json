@@ -1,0 +1,46 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["apps/*/app/entry.*", "apps/*/src/main.*", "libs/*/src/index.*"],
+  "project": ["apps/**/*.{ts,tsx,js,jsx}", "libs/**/*.{ts,tsx,js,jsx}"],
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.cache/**",
+    "**/coverage/**",
+    "**/*.config.*",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/translations/**",
+    "**/messages/**",
+    "**/scripts/**",
+    "**/vitest.*"
+  ],
+  "ignoreDependencies": [
+    "@biomejs/biome",
+    "@clerk/*",
+    "@dotenvx/dotenvx",
+    "@inlang/*",
+    "@tailwindcss/*",
+    "@testing-library/*",
+    "@types/*",
+    "@vitejs/*",
+    "happy-dom",
+    "prettier",
+    "react-router",
+    "tailwindcss",
+    "turbo",
+    "typescript",
+    "vite",
+    "vitest",
+    "tsx"
+  ],
+  "workspaces": {
+    "apps/*": {
+      "entry": ["app/entry.*", "src/main.*", "app/root.*"]
+    },
+    "libs/*": {
+      "entry": ["src/index.*", "index.*"]
+    }
+  }
+}
