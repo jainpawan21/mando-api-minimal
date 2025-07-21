@@ -1,43 +1,40 @@
-import { configureOpenAPI } from './libs/configure-open-api'
-import { batchFetch, createApp } from './libs/create-app'
-import { getNovu } from '@mando/services/libs/novu'
+import { configureOpenAPI } from "./libs/configure-open-api";
+import { batchFetch, createApp } from "./libs/create-app";
+import { getNovu } from "@mando/services/libs/novu";
 
-batchFetch()
+batchFetch();
 
-const app = createApp()
+const app = createApp();
 
-configureOpenAPI(app)
+configureOpenAPI(app);
 
-app.get('/', c => {
-  return c.json({ message: 'Hello Mando!' })
-})
-app.get('/ping', c => {
-  return c.text('pong')
-})
+app.get("/", (c) => {
+  return c.json({ message: "Hello Mando!" });
+});
+app.get("/ping", (c) => {
+  return c.text("pong");
+});
 
-app.get('/novu-test', async c => {
+app.get("/novu-test", async (c) => {
   try {
-    const now = new Date().toISOString()
-  const novuResponse = await getNovu().trigger({
-    workflowId: 'test-workflow-1234',
-    to: {
-      subscriberId: 'omar-12345',
-      email: 'omar@mando.cx',
-      firstName: 'Omar',
-    },
-    payload: {
-      now,
-    },
-  })
-    console.log({novuResponse});
-    
-    return c.json({ novuResponse })
+    const now = new Date().toISOString();
+    const novuResponse = await getNovu().trigger({
+      workflowId: "first-workflow",
+      to: {
+        subscriberId: "64786bc7b2c96c36189ee8a6",
+      },
+      payload: {
+        now,
+      },
+    });
+    console.log({ novuResponse });
+
+    return c.json({ novuResponse });
   } catch (error) {
-    console.log({error});
-    
-    return c.json({ error: error }, 500)
+    console.log({ error });
+
+    return c.json({ error: error }, 500);
   }
-})  
+});
 
-
-export default app
+export default app;

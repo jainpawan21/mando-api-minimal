@@ -1,25 +1,26 @@
-import { Novu } from '@novu/api'
+import { Novu } from "@novu/api";
 
-const novuSecretKey = process.env.NOVU_SECRET_KEY
+const novuSecretKey = process.env.NOVU_SECRET_KEY;
 
 if (!novuSecretKey) {
-  throw new Error('NOVU_SECRET_KEY is not set')
+  throw new Error("NOVU_SECRET_KEY is not set");
 }
 
 export const novu = new Novu({
   secretKey: novuSecretKey,
-  serverURL: 'https://eu.api.novu.co',
-})
-
+  serverURL: "https://eu.api.novu.co",
+});
 
 export const getNovu = () => {
-  const novuSecretKey = process.env.NOVU_SECRET_KEY
+  const novuSecretKey = process.env.NOVU_SECRET_KEY;
+
+  console.log({ novuSecretKey });
   if (!novuSecretKey) {
-    throw new Error('NOVU_SECRET_KEY is not set')
+    throw new Error("NOVU_SECRET_KEY is not set");
   }
 
   return new Novu({
     secretKey: novuSecretKey,
-    serverURL: 'https://eu.api.novu.co',
-  })
-}
+    serverURL: "https://eu.api.novu.co",
+  });
+};
