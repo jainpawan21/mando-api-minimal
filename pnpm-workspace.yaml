@@ -50,7 +50,7 @@ catalog:
   '@types/node': ^24.0.14
   '@types/react': ^19.1.8
   '@types/react-dom': ^19.1.6
-  typescript: ^5.8.3
+  typescript: ^5.9.2
   '@forge42/seo-tools': ^1.4.5
   '@inlang/cli': ^3.0.12
   '@inlang/paraglide-js': ^2.2.0
@@ -84,7 +84,7 @@ catalog:
   '@aws-sdk/client-s3': ^3.844.0
   '@aws-sdk/s3-request-presigner': ^3.844.0
   '@metronome/sdk': 0.1.0-beta.11
-  '@novu/api': ^1.4.0
+  '@novu/api': ^1.5.0
   '@openrouter/ai-sdk-provider': ^0.7.2
   '@turbopuffer/turbopuffer': 0.10.5
   '@upstash/redis': ^1.35.1
@@ -97,4 +97,3 @@ catalog:
   '@orpc/server': ^1.7.1
   '@orpc/client': ^1.7.1
   '@orpc/tanstack-query': ^1.7.1
-
